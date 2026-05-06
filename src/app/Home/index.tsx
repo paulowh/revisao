@@ -1,15 +1,26 @@
 import { Text, View, StyleSheet } from 'react-native'
 import Button from "@/components/Button";
+import Input from "@/components/Input"
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}>
-        Olá
-      </Text>
-      <Button text="Click Aqui!!" />
-      <Button text="O mesmo button" />
-      <Button text="" />
+      <Input placeholder='Aqui é meu primeiro input' />
+      <Input readOnly />
+      <Button text="Click Aqui!!"
+        idButton={23}
+        isAtivado
+        activeOpacity={0.4} />
+
+      <Button text="O mesmo button"
+        idButton={76}
+        isAtivado={false}
+        activeOpacity={0.1} />
+
+      <Button text="5"
+        idButton={67}
+        isAtivado={true}
+        activeOpacity={0.4} />
     </View>
   );
 }
